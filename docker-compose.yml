@@ -1,0 +1,31 @@
+version: '2'
+services:
+  cassandra-node1:
+    image: bitnami/cassandra:4.0.4
+    environment:
+      - CASSANDRA_CLUSTER_NAME=cassandra-cluster
+      - CASSANDRA_SEEDS=cassandra-node1,cassandra-node2, cassandra-node3
+      - CASSANDRA_PASSWORD_SEEDER=yes
+      - CASSANDRA_PASSWORD=password123
+
+  cassandra-node2:
+    image: bitnami/cassandra:4.0.4
+    environment:
+      - CASSANDRA_CLUSTER_NAME=cassandra-cluster
+      - CASSANDRA_SEEDS=cassandra-node1,cassandra-node2, cassandra-node3
+      - CASSANDRA_PASSWORD=password123
+  
+  cassandra-node3:
+    image: bitnami/cassandra:4.0.4
+    environment:
+      - CASSANDRA_CLUSTER_NAME=cassandra-cluster
+      - CASSANDRA_SEEDS=cassandra-node1,cassandra-node2, cassandra-node3
+      - CASSANDRA_PASSWORD=password123
+  app:
+    build: ./Cliente
+    ports:
+      - "5000:5000"
+    depends_on:
+      - cassandra-node1
+      - cassandra-node2
+      - cassandra-node3
