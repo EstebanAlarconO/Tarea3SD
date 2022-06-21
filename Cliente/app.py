@@ -26,10 +26,12 @@ def fakeLoadBalancer():
 
 @app.route('/',methods = ['GET'])
 def cassandra():
-    cluster = Cluster(fakeLoadBalancer(), port=9042, auth_provider=PlainTextAuthProvider(username='cassandra', password='password123'))
-    session = cluster.connect('pacientes', wait_for_all_pools=False)
-    session.execute('USE pacientes')
-    result = session.execute('SELECT * FROM pacientes')
+    cluster = Cluster(contact_points=['cassandra-node1', 'cassandra-node2', 'cassandra-node3'], port=9042, auth_provider=PlainTextAuthProvider(username='cassandra', password='password123'))
+    session1 = cluster.connect('pacientes', wait_for_all_pools=False)
+    session1.execute('USE pacientes')
+    session2 = cluster.connect('recetas', wait_for_all_pools=False)
+    session2.execute('USE pacientes')
+    result = session1.execute('SELECT * FROM pacientes.paciente')
     rows = {}
     for row in result:
         rows[row.id] = row.name

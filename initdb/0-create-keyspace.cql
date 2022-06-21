@@ -1,2 +1,2 @@
-create keyspace pacientes with replication = {'class': 'NetworkTopologyStrategy', 'datacenter1': '3'};
-create keyspace recetas with replication = {'class': 'NetworkTopologyStrategy', 'datacenter2': '2'};
+create keyspace pacientes with replication = {'class': 'SimpleStrategy', 'replication_factor': '2'};
+create keyspace recetas with replication = {'class': 'SimpleStrategy', 'replication_factor': '3'};
