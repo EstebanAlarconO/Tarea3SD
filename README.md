@@ -1,5 +1,10 @@
 # Tarea3SD
 
+<h3 align="Center"> Consideraciones antes de ejecutar </h3>
+
+ - Para la realización de este ejercicio se utilizó el tipo UUID para los primary keys
+ - En el caso del "id_paciente" de la tabla recetas, se cambio de int a text, esto es porque el UUID es un now()
+
 <h3 align="Center"> Preguntas </h3>
 
 1. Explique la arquitectura que Cassandra maneja. Cuando se crea el clúster ¿Cómo los nodos se conectan? ¿Qué ocurre cuando un cliente realiza una petición a uno de los nodos? ¿Qué ocurre cuando uno de los nodos se desconecta? ¿La red generada entre los nodos siempre es eficiente? ¿Existe balanceo de carga?
