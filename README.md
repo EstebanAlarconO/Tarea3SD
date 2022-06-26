@@ -28,6 +28,8 @@ En el caso de utilizar navegador, se deben ingresar a una de las direcciones ya 
 <b>Nota:</b> Se recomienda eliminar las imágenes de docker relacionadas a Cassandra, esto es con el fin de evitar imágenes ya existentes al momento de crear los contenedores.
 
 Se puede observar la implementación completa en el siguiente link: https://youtu.be/wBBjrEtexLs
+    
+    
 ---------------------------------------
 
 <h3 align="Center"> Preguntas </h3>
