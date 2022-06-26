@@ -2,6 +2,9 @@
 <h3 align="Center"> Apache Cassandra </h3>
 
 _Proyecto donde se trabaja con cassandra y python_
+
+---------------------------------------
+
 <h3 align="Center"> Ejecución </h3>
 Para iniciar la aplicación, es necesario ejecutar los siguientes comandos, sin embargo para que funcionen debemos estar en la raíz de la carpeta:
 
@@ -22,6 +25,9 @@ http://localhost:5000/delete
 En el caso de utilizar navegador, se deben ingresar a una de las direcciones ya mencionadas donde se podrá rellenar un formulario.
 
 <b>Nota:</b> Se recomienda eliminar las imágenes de docker relacionadas a Cassandra, esto es con el fin de evitar imágenes ya existentes al momento de crear los contenedores.
+
+---------------------------------------
+
 <h3 align="Center"> Preguntas </h3>
 
 1. Explique la arquitectura que Cassandra maneja. Cuando se crea el clúster ¿Cómo los nodos se conectan? ¿Qué ocurre cuando un cliente realiza una petición a uno de los nodos? ¿Qué ocurre cuando uno de los nodos se desconecta? ¿La red generada entre los nodos siempre es eficiente? ¿Existe balanceo de carga?
@@ -39,6 +45,7 @@ En el caso de utilizar navegador, se deben ingresar a una de las direcciones ya 
     - Si existiera la necesidad de escalar el sistema, se tendria que tener en cuenta que un escalamiento vertical implicaria un aumento en la memoria de los nodos. Para un escalado horizontal se debe tener en cuenta que es necesario manejar más de un "Data Center", es decir seria necesario crear nuevos clústers.
     - Dentro de las mejores que se podrian implementar son las relacionadas al "Sharding", es decir, se montarian y/o crearian nuevos clústers o "Data Centers" con las mismas caracteristicas del que ya se esta utilizando. Esta estrategia operaria de la siguiente manera, dado que un paciente puede ser asociado a diferentes recetas médicas, ya sea por área médica o simplemente porque se le recetó más de una, las tablas de los shards impares serian para los pacientes, mientras qué los shards pares serian para las recetas de esos pacientes. De esa forma podemos evitar que un shard se congestione con demasiadas consultas.
 
+---------------------------------------
 
 <h3 align="Left">Autores</h3>
 
