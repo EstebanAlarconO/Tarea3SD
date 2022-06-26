@@ -1,7 +1,27 @@
 # Tarea3SD
+<h3 align="Center"> Apache Cassandra </h3>
 
-<h3 align="Center"> Consideraciones antes de ejecutar </h3>
+_Proyecto donde se trabaja con cassandra y python_
+<h3 align="Center"> Ejecución </h3>
+Para iniciar la aplicación, es necesario ejecutar los siguientes comandos, sin embargo para que funcionen debemos estar en la raíz de la carpeta:
 
+<h4> Comandos </h4>
+
+```
+$ docker-compose build --no-cache
+$ docker-compose up --force-recreate
+```
+Una vez iniciado se deberá esperar que Cassandra realice sus configuraciones, esto puede tardar unos minutos. Al terminar dicha configuración, se puede utilizar postman o el mismo navegador para probar el funcionamiento de la aplicación. En caso de postman se debe realizar una solicitud POST desde el apartado "Body", seleccionando "form-data" a una de las siguientes direcciones:
+
+```
+http://localhost:5000/create
+http://localhost:5000/update
+http://localhost:5000/delete
+```
+
+En el caso de utilizar navegador, se deben ingresar a una de las direcciones ya mencionadas donde se podrá rellenar un formulario.
+
+<b>Nota:</b> Se recomienda eliminar las imágenes de docker relacionadas a Cassandra, esto es con el fin de evitar imágenes ya existentes al momento de crear los contenedores.
 <h3 align="Center"> Preguntas </h3>
 
 1. Explique la arquitectura que Cassandra maneja. Cuando se crea el clúster ¿Cómo los nodos se conectan? ¿Qué ocurre cuando un cliente realiza una petición a uno de los nodos? ¿Qué ocurre cuando uno de los nodos se desconecta? ¿La red generada entre los nodos siempre es eficiente? ¿Existe balanceo de carga?
