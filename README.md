@@ -38,3 +38,9 @@ En el caso de utilizar navegador, se deben ingresar a una de las direcciones ya 
     - Para el pequeño sistema que se esta montando cumple la solución propuesta, ya que son pocas consultas las realizadas y son pocos los nodos a utilizar. Sin embargo si lo vemos como algo mayor, es probable que no funcione de manera optima.
     - Si existiera la necesidad de escalar el sistema, se tendria que tener en cuenta que un escalamiento vertical implicaria un aumento en la memoria de los nodos. Para un escalado horizontal se debe tener en cuenta que es necesario manejar más de un "Data Center", es decir seria necesario crear nuevos clústers.
     - Dentro de las mejores que se podrian implementar son las relacionadas al "Sharding", es decir, se montarian y/o crearian nuevos clústers o "Data Centers" con las mismas caracteristicas del que ya se esta utilizando. Esta estrategia operaria de la siguiente manera, dado que un paciente puede ser asociado a diferentes recetas médicas, ya sea por área médica o simplemente porque se le recetó más de una, las tablas de los shards impares serian para los pacientes, mientras qué los shards pares serian para las recetas de esos pacientes. De esa forma podemos evitar que un shard se congestione con demasiadas consultas.
+
+
+<h3 align="Left">Autores</h3>
+
+-Esteban Alarcón
+-Tomás Fuentes
