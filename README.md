@@ -11,8 +11,8 @@ Para iniciar la aplicación, es necesario ejecutar los siguientes comandos, sin 
 <h4> Comandos </h4>
 
 ```
-$ docker-compose build --no-cache
-$ docker-compose up --force-recreate
+$ docker-compose build 
+$ docker-compose up 
 ```
 Una vez iniciado se deberá esperar que Cassandra realice sus configuraciones, esto puede tardar unos minutos. Al terminar dicha configuración, se puede utilizar postman o el mismo navegador para probar el funcionamiento de la aplicación. En caso de postman se debe realizar una solicitud POST desde el apartado "Body", seleccionando "form-data" a una de las siguientes direcciones:
 
