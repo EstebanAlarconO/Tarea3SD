@@ -21,11 +21,13 @@ http://localhost:5000/create
 http://localhost:5000/update
 http://localhost:5000/delete
 ```
-
+<b>Nota: <b/>Para un correcto funcionamiento en la dirección "delete" se debe ingresar la key "id_receta".
+    
 En el caso de utilizar navegador, se deben ingresar a una de las direcciones ya mencionadas donde se podrá rellenar un formulario.
 
 <b>Nota:</b> Se recomienda eliminar las imágenes de docker relacionadas a Cassandra, esto es con el fin de evitar imágenes ya existentes al momento de crear los contenedores.
 
+Se puede observar la implementación completa en el siguiente link: https://youtu.be/wBBjrEtexLs
 ---------------------------------------
 
 <h3 align="Center"> Preguntas </h3>
